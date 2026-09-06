@@ -297,6 +297,74 @@ h1,h2,h3{
   margin:0;
 }
 
+/* ---------- Consultation form ---------- */
+.consult{padding:88px 0; background:var(--paper);}
+.consult-grid{
+  display:grid;
+  grid-template-columns:0.85fr 1.15fr;
+  gap:56px;
+  align-items:start;
+}
+.consult-copy p{
+  color:#3A453D;
+  font-size:1rem;
+  max-width:40ch;
+  margin:0 0 22px;
+}
+.consult-form{
+  background:var(--green-100);
+  border:1.5px solid var(--green-900);
+  border-radius:var(--radius-stamp);
+  padding:32px;
+  display:flex;
+  flex-direction:column;
+  gap:18px;
+}
+.form-row{display:flex; flex-direction:column; gap:6px;}
+.form-row-split{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:16px;
+}
+.form-row label{
+  font-size:0.85rem;
+  font-weight:600;
+  color:var(--green-900);
+}
+.form-row label .optional{
+  font-weight:400;
+  color:#5A655D;
+}
+.form-row input,
+.form-row select,
+.form-row textarea{
+  font-family:var(--sans);
+  font-size:0.95rem;
+  padding:11px 14px;
+  border:1.5px solid var(--line);
+  border-radius:4px;
+  background:var(--paper);
+  color:var(--ink);
+}
+.form-row input:focus,
+.form-row select:focus,
+.form-row textarea:focus{
+  outline:2px solid var(--gold-dark);
+  outline-offset:1px;
+  border-color:var(--green-900);
+}
+.form-row textarea{resize:vertical; font-family:var(--sans);}
+.consult-submit{
+  margin-top:6px;
+  width:100%;
+}
+.consult-note{
+  margin:0;
+  font-size:0.82rem;
+  color:#5A655D;
+  text-align:center;
+}
+
 /* ---------- Contact ---------- */
 .contact{padding:96px 0 100px;}
 .contact-grid{
@@ -339,7 +407,11 @@ h1,h2,h3{
   font-size:0.95rem;
   font-weight:600;
   color:var(--green-900);
-  word-break:break-word;
+  overflow-wrap:anywhere;
+  word-break:normal;
+}
+.contact-card[href^="mailto"] .contact-value{
+  font-size:0.85rem;
 }
 
 /* ---------- Footer ---------- */
@@ -365,6 +437,8 @@ h1,h2,h3{
   .about-quote{border-left:none; border-top:4px solid var(--gold); padding:24px 0 0;}
   .contact-grid{grid-template-columns:1fr;}
   .contact-cards{grid-template-columns:1fr;}
+  .consult-grid{grid-template-columns:1fr;}
+  .form-row-split{grid-template-columns:1fr;}
 }
 @media (max-width: 520px){
   .service-grid{grid-template-columns:1fr;}
@@ -382,15 +456,4 @@ h1,h2,h3{
 a:focus-visible, button:focus-visible{
   outline:2px solid var(--gold-dark);
   outline-offset:3px;
-}
-/* Work section link styles */
-.work-details h3 a {
-  color: inherit !important;
-  text-decoration: none !important;
-  transition: color 0.2s ease;
-}
-
-.work-details h3 a:hover {
-  color: #A87D0F !important;
-  text-decoration: underline !important;
 }

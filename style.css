@@ -457,3 +457,14 @@ a:focus-visible, button:focus-visible{
   outline:2px solid var(--gold-dark);
   outline-offset:3px;
 }
+/* Work section link styles */
+.work-details h3 a {
+  color: inherit !important;
+  text-decoration: none !important;
+  transition: color 0.2s ease;
+}
+
+.work-details h3 a:hover {
+  color: #A87D0F !important;
+  text-decoration: underline !important;
+}

@@ -385,11 +385,12 @@ a:focus-visible, button:focus-visible{
 }
 /* Work section link styles */
 .work-details h3 a {
-  color: #2563eb !important;
-  text-decoration: underline !important;
+  color: inherit !important;
+  text-decoration: none !important;
   transition: color 0.2s ease;
 }
 
 .work-details h3 a:hover {
-  color: #1d4ed8 !important;
+  color: #2563eb !important;
+  text-decoration: underline !important;
 }

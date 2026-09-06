@@ -21,6 +21,7 @@
       <a href="#services">Services</a>
       <a href="#work">Work</a>
       <a href="#about">About</a>
+      <a href="#consult">Consultation</a>
       <a href="#contact">Contact</a>
     </nav>
     <a href="https://wa.me/8801842031164" class="btn btn-small" target="_blank" rel="noopener">Message on WhatsApp</a>
@@ -37,7 +38,7 @@
         <h1>I turn ad spend into<br>customers who <em>actually buy.</em></h1>
         <p class="hero-sub">I plan, launch and optimise Facebook &amp; YouTube ad campaigns, sharpen your SEO, and read the market before you spend a single taka — so your budget goes toward people ready to say yes.</p>
         <div class="hero-actions">
-          <a href="#contact" class="btn btn-primary">Start a project</a>
+          <a href="#consult" class="btn btn-primary">Start a project</a>
           <a href="#work" class="btn btn-ghost">See my work</a>
         </div>
         <div class="hero-stamp-row">
@@ -97,11 +98,11 @@
       </div>
       <div class="work-card">
         <div class="work-image">
-          <img src="project-halalfood.png" alt="Halal Food website homepage screenshot showing product categories">
+          <img src="project-halalfood.jpg" alt="Halal Food website homepage screenshot showing product categories">
         </div>
         <div class="work-details">
           <span class="work-tag">Website &amp; Content Structure</span>
-         <h3><a href="https://faysaltalukder36-arch.github.io/halal-food/" target="_blank">Halal Food – Online Product Catalogue</a></h3>
+          <h3><a href="https://faysaltalukder36-arch.github.io/halal-food/" target="_blank" rel="noopener">Halal Food — Online Product Catalogue</a></h3>
           <p>Designed the category structure and page layout for a halal grocery brand — organising Dates, Dry Food, Honey, Spices, Tea and Fresh Meat into a clear, easy-to-browse catalogue that supports both walk-in and phone orders.</p>
         </div>
       </div>
@@ -124,6 +125,71 @@
       <div class="about-quote">
         <p>&ldquo;Good marketing isn't louder ads — it's the right message reaching the right person at the right cost.&rdquo;</p>
       </div>
+    </div>
+  </section>
+
+  <!-- CONSULTATION FORM -->
+  <section id="consult" class="consult">
+    <div class="wrap consult-grid">
+      <div class="consult-copy">
+        <div class="section-head left">
+          <h2>Book a free consultation</h2>
+          <p>Tell me a little about your business and I'll get back to you quickly to arrange a time to talk.</p>
+        </div>
+        <div class="stamp small">
+          <span class="stamp-label">Response time</span>
+          <span class="stamp-value">Usually within a few hours</span>
+        </div>
+      </div>
+
+      <form class="consult-form" action="https://formspree.io/f/xyeydlrj" method="POST">
+        <div class="form-row">
+          <label for="c-name">Your name</label>
+          <input type="text" id="c-name" name="name" required placeholder="e.g. Rahim Uddin">
+        </div>
+
+        <div class="form-row form-row-split">
+          <div>
+            <label for="c-phone">Phone / WhatsApp</label>
+            <input type="tel" id="c-phone" name="phone" required placeholder="01XXXXXXXXX">
+          </div>
+          <div>
+            <label for="c-email">Email</label>
+            <input type="email" id="c-email" name="email" required placeholder="you@example.com">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <label for="c-business">Type of business</label>
+          <select id="c-business" name="business_type" required>
+            <option value="" disabled selected>Select your business type</option>
+            <option value="Clothing / Fashion">Clothing / Fashion</option>
+            <option value="Food / Restaurant">Food / Restaurant</option>
+            <option value="Organic Food">Organic Food</option>
+            <option value="Electronics / Gadgets">Electronics / Gadgets</option>
+            <option value="Beauty / Cosmetics">Beauty / Cosmetics</option>
+            <option value="Real Estate">Real Estate</option>
+            <option value="Education / Coaching">Education / Coaching</option>
+            <option value="E-commerce">E-commerce</option>
+            <option value="Others">Others</option>
+          </select>
+        </div>
+
+        <div class="form-row" id="other-business-row" hidden>
+          <label for="c-business-other">Describe your business</label>
+          <input type="text" id="c-business-other" name="business_other" placeholder="Tell me briefly what you do">
+        </div>
+
+        <div class="form-row">
+          <label for="c-message">What would you like to discuss? <span class="optional">(optional)</span></label>
+          <textarea id="c-message" name="message" rows="3" placeholder="A short note about your goals or questions"></textarea>
+        </div>
+
+        <input type="hidden" name="_subject" value="New consultation request — Portfolio site">
+
+        <button type="submit" class="btn btn-primary consult-submit">Request a consultation</button>
+        <p class="consult-note">I'll reach out on WhatsApp or email to schedule a time that works for you.</p>
+      </form>
     </div>
   </section>
 
@@ -164,6 +230,24 @@
   </div>
 </footer>
 
-<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+
+const bizSelect = document.getElementById('c-business');
+const otherRow = document.getElementById('other-business-row');
+const otherInput = document.getElementById('c-business-other');
+if (bizSelect) {
+  bizSelect.addEventListener('change', function () {
+    if (this.value === 'Others') {
+      otherRow.hidden = false;
+      otherInput.required = true;
+    } else {
+      otherRow.hidden = true;
+      otherInput.required = false;
+      otherInput.value = '';
+    }
+  });
+}
+</script>
 </body>
 </html>

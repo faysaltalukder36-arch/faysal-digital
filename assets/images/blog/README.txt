@@ -1,0 +1,1 @@
+Upload blog cover images here. Use descriptive filenames matching the blog article.

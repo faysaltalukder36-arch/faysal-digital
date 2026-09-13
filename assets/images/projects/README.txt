@@ -1,0 +1,1 @@
+Upload project screenshots/case-study images here. Use descriptive filenames.

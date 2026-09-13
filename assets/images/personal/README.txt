@@ -1,0 +1,1 @@
+Upload your personal/profile and social-share images here. Exact names are documented in README.md.

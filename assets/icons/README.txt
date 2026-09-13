@@ -1,0 +1,1 @@
+Reserved for lightweight SVG icons if you later add them.

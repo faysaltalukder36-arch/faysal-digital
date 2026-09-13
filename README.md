@@ -1,25 +1,42 @@
-# Md. Faysal Talukder — Portfolio Website
+# Md. Faysal Talukder — Portfolio / Personal Brand Website
 
-## GitHub-এ আপলোড ও লাইভ করার নিয়ম (GitHub Pages)
+This version is rebuilt as a fast, responsive, GitHub Pages-ready static website.
 
-1. GitHub-এ একটা নতুন repository তৈরি করো — নাম দাও, উদাহরণ: `portfolio`
-2. এই ৩টা জিনিস (index.html, style.css, assets ফোল্ডার) repository-তে আপলোড করো (Add file → Upload files)
-3. Repository-র **Settings → Pages**-এ যাও
-4. **Branch: main**, folder: **/ (root)** সিলেক্ট করে Save করো
-5. কিছুক্ষণ পর তোমার সাইট লাইভ হবে এই লিংকে:
-   `https://<তোমার-github-ইউজারনেম>.github.io/portfolio/`
+## Upload to GitHub
 
-## ফাইল স্ট্রাকচার
-```
-portfolio/
-├── index.html
-├── style.css
-└── assets/
-    ├── profile.jpg
-    └── project-halalfood.jpg
-```
+1. Upload the contents of this folder to your repository root.
+2. GitHub → Settings → Pages → Deploy from branch → `main` → `/ (root)`.
+3. Replace the `example.com` values in `index.html`, `blog/*.html`, `robots.txt`, and `sitemap.xml` with your real domain before launch.
+4. Add your own images using the exact file names listed below.
 
-## পরে যা বদলাতে পারবে
-- **নতুন প্রজেক্ট যোগ**: `index.html`-এ `<section id="work">` অংশে `.work-card` ব্লকটা কপি করে নতুন প্রজেক্টের ছবি ও লেখা বসাও (ছবি `assets/` ফোল্ডারে রাখতে হবে)
-- **রঙ পরিবর্তন**: `style.css`-এর একদম উপরে `:root` অংশে `--green-900`, `--gold` ভ্যারিয়েবলগুলো বদলালেই পুরো সাইটের রঙ বদলে যাবে
-- **টেক্সট এডিট**: `index.html`-এ সরাসরি লেখা বদলাও
+## Image folders
+
+### Personal
+- `assets/images/personal/profile-photo.webp` — your professional profile photo.
+- `assets/images/personal/social-share.webp` — social/Open Graph share image (1200×675 recommended).
+
+### Projects
+- `assets/images/projects/halal-food.webp` — image/screenshot for the Halal Food case study.
+- Add future project images here with descriptive names.
+
+### Blog
+- `assets/images/blog/facebook-ads-strategy.webp`
+- `assets/images/blog/google-ads-keyword-research.webp`
+- `assets/images/blog/market-research-framework.webp`
+
+The current website does not depend on the original uploaded JPEG/PNG images. Placeholder SVGs are included so the repository never points to a missing file.
+
+## Preserved contact destinations
+
+The existing contact/social destinations have been kept:
+- Email: faysal.talukder36@gmail.com
+- WhatsApp: https://wa.me/8801842031164
+- LinkedIn: https://www.linkedin.com/in/faysaldigital/
+- Facebook: https://www.facebook.com/faysaldigital.me/directory_links
+- Existing Formspree endpoint: https://formspree.io/f/xyeydlrj
+
+## Editing guidance
+
+- The website copy is intentionally written as a strong first draft. Edit claims, services, location and wording to match your exact experience.
+- Do not publish invented results, clients or testimonials. Replace draft case-study metrics with verified evidence.
+- Replace `https://example.com` with your real domain in canonical tags, robots.txt and sitemap.xml.
